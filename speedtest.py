@@ -3,7 +3,7 @@ import re
 import subprocess
 import time
 
-response = subprocess.Popen('speedtest-cli --simple', shell=True, stdout=subprocess.PIPE).stdout.read()
+response = subprocess.Popen('speedtest-cli --simple', shell=True, stdout=subprocess.PIPE).stdout.read().decode('utf-8')
 
 ping = re.findall('Ping:\s(.*?)\s', response, re.MULTILINE)
 download = re.findall('Download:\s(.*?)\s', response, re.MULTILINE)
