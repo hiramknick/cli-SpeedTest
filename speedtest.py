@@ -12,6 +12,6 @@ print("TestSuccessfull")
 ##ping[0] = ping[0].replace(',', '.')
 ##download[0] = download[0].replace(',', '.')
 ##upload[0] = upload[0].replace(',', '.')
-#if os.stat('/Users/hiramknick/code/personal/PythonSpeedTest/results/sample.csv').st_size == 0:
+if os.stat('/home/pi/results/tests.csv').st_size == 0:
 print('Date,Time,Ping,Download,Upload')
 print('{},{},{},{},{}'.format(time.strftime('%m/%d/%y'), time.strftime('%H:%M'), ping[0], download[0], upload[0]))
