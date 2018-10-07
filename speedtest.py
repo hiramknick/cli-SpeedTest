@@ -11,7 +11,7 @@ upload = re.findall('Upload:\s(.*?)\s', response, re.MULTILINE)
 ##ping[0] = ping[0].replace(',', '.')
 ##download[0] = download[0].replace(',', '.')
 ##upload[0] = upload[0].replace(',', '.')
-if os.stat('/home/pi/cli-SpeedTest/results/tests.csv').st_size == 0:
+if os.stat('./tests.csv').st_size == 0:
     print('Date,Time,Ping,Download,Upload')
 
 print('{},{},{},{},{}'.format(time.strftime('%m/%d/%y'), time.strftime('%H:%M'), ping[0], download[0], upload[0]))
